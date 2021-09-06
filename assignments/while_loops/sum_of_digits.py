@@ -1,0 +1,8 @@
+n = int(input("Input an int: ")) # Do not change this line
+
+total_sum = 0
+while n != 0:
+    total_sum += n % 10
+    n //= 10
+
+print(total_sum)
