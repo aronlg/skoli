@@ -1,28 +1,25 @@
-INPUT_NUMBER = "Input an integer (0 to quit): "
+PROMPT = "Input an integer (0 to quit): "
 
-sum_even = 0
-sum_odd = 0
-count_even = 0
-count_odd = 0
+even_count = 0
+odd_count = 0
+even_sum = 0
+odd_sum = 0
 
-num = int(input(INPUT_NUMBER))
-
-while num != 0:
-    if num >= 0:
-        if num % 2 == 0:
-            sum_even += num
-            count_even += 1
-
-        else:
-            sum_odd += num
-            count_odd += 1
-
+next_int = int(input(PROMPT))
+while next_int != 0:
+    if next_int > 0:
+        if next_int % 2 == 0:   # even
+            even_count += 1
+            even_sum += next_int
+        else:                   # odd
+            odd_count += 1
+            odd_sum += next_int
     else:
         print("Ignoring this negative number!")
 
-    num = int(input(INPUT_NUMBER))
+    next_int = int(input(PROMPT))
 
-print("Sum of even:", sum_even)
-print("Sum of odd:", sum_odd)
-print("Even count:", count_even)
-print("Odd count:", count_odd)
+print("Sum of even:", even_sum)
+print("Sum of odd:", odd_sum)
+print("Even count:", even_count)
+print("Odd count:", odd_count)

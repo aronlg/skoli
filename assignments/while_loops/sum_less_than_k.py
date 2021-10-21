@@ -9,5 +9,4 @@ while current_sum <= k:
     previous_sum = current_sum
     current_sum += term
 current_sum = previous_sum
-
 print("Sum:", current_sum)
